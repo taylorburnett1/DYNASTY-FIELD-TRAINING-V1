@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DYNASTY &mdash; Closing, Objections &amp; Looping 101</title>
+<meta name="description" content="A field-ready playbook for solar appointment setters. Closing with confidence, timing, objection control, and looping &mdash; the Dynasty way.">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #111110; --charcoal: #1C1C1B; --dark: #242422; --mid: #3A3A38;
+    --rule: #2E2E2C; --dim: #666662; --muted: #999994; --light: #C8C8C0; --white: #F2F2EE;
+    --accent-mindset: #7A74D4;   /* purple — mindset / mental */
+    --accent-script:  #3DAB82;   /* teal — structure */
+    --accent-close:   #C96840;   /* burnt orange — the close */
+    --accent-loop:    #4A90C4;   /* blue — objection / looping */
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; overflow-x: hidden; line-height: 1.6; }
+  ::selection { background: rgba(242,242,238,0.2); color: var(--white); }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px;
+    background: linear-gradient(to bottom, rgba(17,17,16,0.95) 0%, rgba(17,17,16,0) 100%);
+    backdrop-filter: blur(8px);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-mark { width: 26px; height: 26px; color: var(--white); display: block; }
+  .nav-logo-mark svg { width: 100%; height: 100%; fill: currentColor; }
+  .nav-logo-text { font-family: 'UnifrakturCook', cursive; font-size: 26px; color: var(--white); letter-spacing: 2px; line-height: 1; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    position: relative; padding: 20px 24px 40px;
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(122,116,212,0.07) 0%, transparent 70%), var(--black);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-repeat: repeat; background-size: 200px 200px; opacity: 0.5;
+  }
+  .hero-d-watermark {
+    position: absolute; bottom: -8%; left: 50%; transform: translateX(-50%);
+    width: 70vmin; height: 70vmin; max-width: 720px; max-height: 720px;
+    color: var(--white); opacity: 0.025; pointer-events: none; z-index: 0;
+  }
+  .hero-d-watermark svg { width: 100%; height: 100%; fill: currentColor; }
+  .hero-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--dim); margin-bottom: 32px; display: flex; align-items: center; gap: 16px; position: relative; z-index: 1; }
+  .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 40px; height: 0.5px; background: var(--dim); }
+  .hero-title { font-family: 'UnifrakturCook', cursive; font-size: clamp(80px, 14vw, 168px); color: var(--white); line-height: 0.9; position: relative; z-index: 1; animation: fadeUp 1s ease both; letter-spacing: 0.01em; }
+  .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 30px); font-weight: 300; color: var(--muted); letter-spacing: 0.08em; margin-top: 24px; animation: fadeUp 1s 0.15s ease both; position: relative; z-index: 1; font-style: italic; }
+  .hero-sub-mark { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 500; letter-spacing: 0.3em; color: var(--dim); text-transform: uppercase; margin-top: 14px; animation: fadeUp 1s 0.2s ease both; position: relative; z-index: 1; }
+  .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(15px, 1.8vw, 19px); font-weight: 400; letter-spacing: 0.02em; color: var(--light); max-width: 560px; line-height: 1.8; margin-top: 44px; animation: fadeUp 1s 0.3s ease both; position: relative; z-index: 1; font-style: italic; }
+  .hero-tagline strong { color: var(--white); font-weight: 500; font-style: normal; }
+  .hero-cta { margin-top: 52px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeUp 1s 0.45s ease both; position: relative; z-index: 1; }
+  .btn-primary { padding: 14px 36px; background: var(--white); color: var(--black); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-primary:hover { background: var(--light); transform: translateY(-1px); }
+  .btn-ghost { padding: 14px 36px; background: transparent; color: var(--muted); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 0.5px solid var(--rule); cursor: pointer; transition: border-color 0.2s, color 0.2s, transform 0.15s; }
+  .btn-ghost:hover { color: var(--white); border-color: var(--dim); transform: translateY(-1px); }
+  .scroll-hint { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--dim); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; animation: fadeUp 1s 0.8s ease both; z-index: 1; }
+  .scroll-line { width: 0.5px; height: 40px; background: linear-gradient(to bottom, var(--dim), transparent); animation: scrollPulse 2s ease infinite; }
+
+  /* SECTION DIVIDER */
+  .section-divider { display: flex; align-items: center; gap: 24px; padding: 0 48px; margin: 0 auto; max-width: 1100px; }
+  .section-divider span { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); white-space: nowrap; }
+  .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 0.5px; background: var(--rule); }
+
+  /* MISSION */
+  .mission { padding: 100px 48px; max-width: 900px; margin: 0 auto; text-align: center; }
+  .mission-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 40px); font-weight: 300; line-height: 1.5; color: var(--white); letter-spacing: 0.01em; }
+  .mission-quote em { color: var(--muted); font-style: italic; }
+  .mission-attr { margin-top: 32px; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
+
+  /* PILLARS (the four parts of training) */
+  .pillars-section { padding: 80px 48px 100px; max-width: 1100px; margin: 0 auto; }
+  .pillars-header { margin-bottom: 48px; }
+  .pillars-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 400; color: var(--white); line-height: 1.1; }
+  .pillars-header p { font-size: 13px; color: var(--dim); margin-top: 12px; line-height: 1.7; max-width: 480px; }
+  .pillars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .pillar-card { background: var(--charcoal); padding: 40px 36px; position: relative; overflow: hidden; transition: background 0.3s; text-decoration: none; color: inherit; display: block; }
+  .pillar-card:hover { background: var(--dark); }
+  .pillar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  .pillar-card.mindset::before { background: var(--accent-mindset); }
+  .pillar-card.script::before  { background: var(--accent-script); }
+  .pillar-card.close::before   { background: var(--accent-close); }
+  .pillar-card.loop::before    { background: var(--accent-loop); }
+  .pillar-number { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; position: absolute; top: 20px; right: 28px; opacity: 0.06; line-height: 1; pointer-events: none; color: var(--white); }
+  .pillar-label { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+  .pillar-card.mindset .pillar-label { color: var(--accent-mindset); }
+  .pillar-card.script  .pillar-label { color: var(--accent-script); }
+  .pillar-card.close   .pillar-label { color: var(--accent-close); }
+  .pillar-card.loop    .pillar-label { color: var(--accent-loop); }
+  .pillar-title { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 500; color: var(--white); margin-bottom: 10px; line-height: 1.1; }
+  .pillar-desc { font-size: 12px; color: var(--dim); line-height: 1.7; margin-bottom: 28px; }
+  .topic-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .topic-item { display: flex; gap: 12px; align-items: flex-start; }
+  .topic-dot { width: 4px; height: 4px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+  .mindset .topic-dot { background: var(--accent-mindset); }
+  .script  .topic-dot { background: var(--accent-script); }
+  .close   .topic-dot { background: var(--accent-close); }
+  .loop    .topic-dot { background: var(--accent-loop); }
+  .topic-name { font-size: 12px; font-weight: 600; color: var(--light); letter-spacing: 0.03em; }
+  .topic-desc { font-size: 11px; color: var(--dim); line-height: 1.5; margin-top: 1px; }
+
+  /* CONTENT SECTION (general) */
+  .content-section { padding: 80px 48px; border-top: 0.5px solid var(--rule); }
+  .content-section.alt { background: var(--charcoal); }
+  .content-inner { max-width: 1100px; margin: 0 auto; }
+  .content-header { text-align: center; margin-bottom: 56px; }
+  .content-header .eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--dim); display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 18px; }
+  .content-header .eyebrow::before, .content-header .eyebrow::after { content: ''; display: block; width: 40px; height: 0.5px; background: var(--rule); }
+  .content-header .eyebrow.acc-mindset { color: var(--accent-mindset); }
+  .content-header .eyebrow.acc-script  { color: var(--accent-script); }
+  .content-header .eyebrow.acc-close   { color: var(--accent-close); }
+  .content-header .eyebrow.acc-loop    { color: var(--accent-loop); }
+  .content-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.5vw, 48px); font-weight: 400; color: var(--white); line-height: 1.1; letter-spacing: 0.005em; }
+  .content-header h2 em { font-style: italic; color: var(--muted); }
+  .content-header p { font-size: 13px; color: var(--dim); margin-top: 14px; line-height: 1.7; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+  /* PROSE BODY */
+  .prose { max-width: 760px; margin: 0 auto; }
+  .prose p { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; line-height: 1.75; color: var(--light); margin-bottom: 18px; }
+  .prose p strong { color: var(--white); font-weight: 600; }
+  .prose p em { color: var(--muted); font-style: italic; }
+
+  /* RHYTHM (3-up stat row) */
+  .rhythm-section { padding: 80px 48px; border-top: 0.5px solid var(--rule); border-bottom: 0.5px solid var(--rule); background: var(--charcoal); }
+  .rhythm-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+  .rhythm-item { padding: 48px 40px; border-right: 0.5px solid var(--rule); text-align: center; }
+  .rhythm-item:last-child { border-right: none; }
+  .rhythm-num { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 12px; }
+  .rhythm-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--light); margin-bottom: 6px; }
+  .rhythm-desc { font-size: 12px; color: var(--dim); line-height: 1.6; }
+
+  /* STEP LIST (numbered, used for the 6-step pitch & sequences) */
+  .step-grid { display: grid; grid-template-columns: 1fr; gap: 2px; }
+  .step-card { background: var(--charcoal); padding: 32px 36px; display: grid; grid-template-columns: 80px 1fr; gap: 32px; align-items: start; transition: background 0.3s; border-left: 2px solid transparent; }
+  .step-card:hover { background: var(--dark); }
+  .step-card.crit { border-left-color: var(--accent-close); }
+  .step-card.win  { border-left-color: var(--accent-script); }
+  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; color: var(--white); line-height: 1; opacity: 0.85; }
+  .step-card.crit .step-num { color: var(--accent-close); }
+  .step-card.win  .step-num { color: var(--accent-script); }
+  .step-body h4 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
+  .step-body p { font-size: 13px; color: var(--dim); line-height: 1.7; }
+  .step-flag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 3px 8px; margin-left: 10px; vertical-align: 2px; }
+  .step-flag.crit { background: rgba(201,104,64,0.15); color: var(--accent-close); }
+  .step-flag.win  { background: rgba(61,171,130,0.15); color: var(--accent-script); }
+
+  /* SCRIPT BLOCK — quoted, italic, hairline-bordered */
+  .script-block { background: var(--dark); border: 0.5px solid var(--rule); border-left: 2px solid var(--accent-script); padding: 36px 40px; margin: 36px 0; }
+  .script-block .label { font-size: 9px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-script); margin-bottom: 18px; }
+  .script-block p.dir { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.08em; color: var(--dim); font-style: italic; margin: 14px 0 6px; text-transform: uppercase; }
+  .script-block p.line { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; line-height: 1.55; color: var(--white); margin-bottom: 4px; font-style: italic; }
+  .script-block p.line strong { font-style: normal; color: var(--white); font-weight: 600; background: linear-gradient(transparent 60%, rgba(61,171,130,0.18) 60%); padding: 0 2px; }
+  .script-block.acc-close { border-left-color: var(--accent-close); }
+  .script-block.acc-close .label { color: var(--accent-close); }
+  .script-block.acc-close p.line strong { background: linear-gradient(transparent 60%, rgba(201,104,64,0.2) 60%); }
+  .script-block.acc-loop { border-left-color: var(--accent-loop); }
+  .script-block.acc-loop .label { color: var(--accent-loop); }
+  .script-block.acc-loop p.line strong { background: linear-gradient(transparent 60%, rgba(74,144,196,0.2) 60%); }
+
+  /* PULL QUOTE */
+  .pull-quote { padding: 60px 48px; text-align: center; max-width: 900px; margin: 0 auto; }
+  .pull-quote-mark { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--rule); line-height: 1; margin-bottom: 16px; }
+  .pull-quote-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 32px); font-weight: 300; color: var(--white); line-height: 1.4; letter-spacing: 0.01em; font-style: italic; }
+  .pull-quote-text strong { color: var(--white); font-weight: 500; font-style: normal; background: linear-gradient(transparent 65%, rgba(122,116,212,0.25) 65%); padding: 0 4px; }
+
+  /* TWO-COL CUE GRID */
+  .cue-section { padding: 60px 48px; border-top: 0.5px solid var(--rule); }
+  .cue-section .content-header { margin-bottom: 36px; }
+  .cue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; max-width: 1100px; margin: 0 auto; }
+  .cue-col { background: var(--charcoal); padding: 36px 32px; }
+  .cue-col.green { border-top: 2px solid var(--accent-script); }
+  .cue-col.red   { border-top: 2px solid var(--accent-close); }
+  .cue-col-head { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; }
+  .cue-col.green .cue-col-head { color: var(--accent-script); }
+  .cue-col.red   .cue-col-head { color: var(--accent-close); }
+  .cue-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .cue-list li { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; color: var(--light); line-height: 1.5; padding-left: 16px; position: relative; }
+  .cue-list li::before { content: ''; position: absolute; left: 0; top: 11px; width: 6px; height: 0.5px; }
+  .cue-col.green .cue-list li::before { background: var(--accent-script); }
+  .cue-col.red   .cue-list li::before { background: var(--accent-close); }
+  .cue-list li em { color: var(--dim); font-size: 13px; font-style: italic; }
+
+  /* NUMBERED OBJECTION LIST (like the schedule grid) */
+  .obj-section { padding: 80px 48px; background: var(--charcoal); border-top: 0.5px solid var(--rule); border-bottom: 0.5px solid var(--rule); }
+  .obj-grid { display: grid; grid-template-columns: 1fr; gap: 2px; max-width: 1100px; margin: 0 auto; }
+  .obj-card { background: var(--dark); padding: 0; transition: background 0.2s; border-left: 2px solid var(--rule); }
+  .obj-card:hover { background: var(--mid); }
+  .obj-card[open] { background: var(--mid); border-left-color: var(--accent-loop); }
+  .obj-card summary { list-style: none; cursor: pointer; padding: 28px 36px; display: grid; grid-template-columns: 60px 1fr 32px; gap: 24px; align-items: center; }
+  .obj-card summary::-webkit-details-marker { display: none; }
+  .obj-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--white); opacity: 0.5; line-height: 1; }
+  .obj-card[open] .obj-num { color: var(--accent-loop); opacity: 1; }
+  .obj-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--white); line-height: 1.2; letter-spacing: 0.005em; }
+  .obj-toggle { color: var(--dim); font-size: 18px; line-height: 1; transition: transform 0.3s, color 0.2s; text-align: right; }
+  .obj-card[open] .obj-toggle { transform: rotate(45deg); color: var(--accent-loop); }
+  .obj-body { padding: 0 36px 36px 120px; }
+  .obj-body p { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.7; color: var(--light); margin-bottom: 14px; }
+  .obj-body p.teach { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; color: var(--accent-loop); padding: 12px 16px; border-left: 2px solid var(--accent-loop); background: rgba(74,144,196,0.06); margin-bottom: 18px; line-height: 1.6; font-style: normal; }
+  .obj-body p.teach b { color: var(--white); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 10px; display: block; margin-bottom: 4px; }
+  .obj-body p.line { font-style: italic; color: var(--white); }
+  .obj-body p.close { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: var(--accent-close); padding: 14px 16px; border-left: 2px solid var(--accent-close); background: rgba(201,104,64,0.06); text-transform: uppercase; line-height: 1.6; margin-top: 16px; }
+  .obj-body p.close b { color: var(--white); font-weight: 700; letter-spacing: 0.18em; font-size: 10px; display: block; margin-bottom: 4px; }
+  .obj-body p.close em { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--white); text-transform: none; letter-spacing: 0; font-weight: 400; line-height: 1.5; display: block; margin-top: 4px; }
+
+  /* FRAMEWORK 4-up */
+  .framework-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; max-width: 1100px; margin: 0 auto; }
+  .fw-card { background: var(--charcoal); padding: 36px 28px; position: relative; transition: background 0.3s; }
+  .fw-card:hover { background: var(--dark); }
+  .fw-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  .fw-card:nth-child(1)::before { background: var(--accent-mindset); }
+  .fw-card:nth-child(2)::before { background: var(--accent-script); }
+  .fw-card:nth-child(3)::before { background: var(--accent-loop); }
+  .fw-card:nth-child(4)::before { background: var(--accent-close); }
+  .fw-num { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; color: var(--white); opacity: 0.18; line-height: 1; position: absolute; top: 18px; right: 24px; }
+  .fw-label { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 14px; }
+  .fw-card:nth-child(1) .fw-label { color: var(--accent-mindset); }
+  .fw-card:nth-child(2) .fw-label { color: var(--accent-script); }
+  .fw-card:nth-child(3) .fw-label { color: var(--accent-loop); }
+  .fw-card:nth-child(4) .fw-label { color: var(--accent-close); }
+  .fw-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--white); margin-bottom: 10px; line-height: 1.15; }
+  .fw-desc { font-size: 12px; color: var(--dim); line-height: 1.7; margin-bottom: 18px; }
+  .fw-quote { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-style: italic; color: var(--light); line-height: 1.5; padding-top: 14px; border-top: 0.5px solid var(--rule); }
+
+  /* TIMELINE (10-min module) */
+  .timeline-list { list-style: none; max-width: 760px; margin: 0 auto; }
+  .timeline-item { display: grid; grid-template-columns: 110px 1fr; gap: 28px; padding: 24px 0; border-bottom: 0.5px solid var(--rule); align-items: start; }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-stamp { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: var(--accent-mindset); text-transform: uppercase; }
+  .timeline-h4 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--white); margin-bottom: 4px; line-height: 1.2; }
+  .timeline-p { font-size: 13px; color: var(--dim); line-height: 1.7; }
+
+  /* LOOP 5 ROWS */
+  .loop5 { max-width: 760px; margin: 0 auto; border: 0.5px solid var(--rule); }
+  .loop5-row { display: grid; grid-template-columns: 220px 1fr; padding: 22px 32px; border-bottom: 0.5px solid var(--rule); align-items: center; gap: 24px; }
+  .loop5-row:last-child { border-bottom: none; }
+  .loop5-row b { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: var(--light); text-transform: uppercase; }
+  .loop5-row span { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--white); line-height: 1.4; }
+  .loop5-final { background: rgba(201,104,64,0.05); }
+  .loop5-final b { color: var(--accent-close); }
+
+  /* SEQUENCE TABLE */
+  .seq-table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; border-top: 0.5px solid var(--rule); }
+  .seq-table tr { border-bottom: 0.5px solid var(--rule); }
+  .seq-table td { padding: 18px 24px; vertical-align: top; }
+  .seq-table td:first-child { width: 60px; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--accent-loop); }
+  .seq-table td:nth-child(2) { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; width: 38%; }
+  .seq-table td:last-child { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--light); line-height: 1.5; }
+
+  /* CHECKLIST */
+  .checklist { max-width: 700px; margin: 0 auto; list-style: none; }
+  .checklist li { display: flex; gap: 16px; padding: 14px 0; border-bottom: 0.5px solid var(--rule); align-items: flex-start; }
+  .checklist li:last-child { border-bottom: none; }
+  .check-mark { width: 16px; height: 16px; border: 0.5px solid var(--accent-script); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 4px; color: var(--accent-script); font-size: 11px; font-weight: 700; }
+  .checklist li span { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--light); line-height: 1.55; }
+
+  /* ROUNDS (practice) */
+  .rounds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; max-width: 1100px; margin: 0 auto; }
+  .round-card { background: var(--charcoal); padding: 40px 36px; border-top: 2px solid var(--accent-mindset); }
+  .round-card:nth-child(2) { border-top-color: var(--accent-loop); }
+  .round-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent-mindset); margin-bottom: 14px; }
+  .round-card:nth-child(2) .round-eyebrow { color: var(--accent-loop); }
+  .round-h { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; color: var(--white); margin-bottom: 18px; line-height: 1.15; }
+  .round-card p { font-size: 13px; color: var(--light); line-height: 1.75; margin-bottom: 12px; }
+  .round-card p b { color: var(--white); font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 2px; color: var(--dim); }
+  .round-listen { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--light); padding-top: 16px; margin-top: 16px; border-top: 0.5px solid var(--rule); }
+
+  /* SIMULATOR */
+  .sim { max-width: 900px; margin: 48px auto 0; background: var(--charcoal); border: 0.5px solid var(--rule); border-top: 2px solid var(--accent-loop); }
+  .sim-controls { display: flex; flex-wrap: wrap; gap: 1px; padding: 0; background: var(--rule); }
+  .sim-btn { background: var(--dark); color: var(--muted); border: none; padding: 14px 18px; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, color 0.2s; flex: 1 1 auto; }
+  .sim-btn:hover { background: var(--mid); color: var(--light); }
+  .sim-btn.active { background: var(--accent-loop); color: var(--white); }
+  .sim-stage { padding: 36px 40px; }
+  .sim-block { padding: 22px 26px; margin-bottom: 16px; border-left: 2px solid var(--rule); background: rgba(255,255,255,0.015); }
+  .sim-customer { border-left-color: var(--accent-close); }
+  .sim-setter { border-left-color: var(--accent-script); display: none; }
+  .sim-setter.show { display: block; animation: fadeUp 0.5s ease; }
+  .sim-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 10px; }
+  .sim-customer .sim-tag { color: var(--accent-close); }
+  .sim-setter   .sim-tag { color: var(--accent-script); }
+  .sim-block p { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--white); line-height: 1.55; margin: 0; }
+  .sim-reveal { display: block; width: 100%; padding: 16px; background: var(--dark); color: var(--muted); border: none; border-top: 0.5px solid var(--rule); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, color 0.2s; }
+  .sim-reveal:hover:not(:disabled) { background: var(--mid); color: var(--white); }
+  .sim-reveal:disabled { color: var(--dim); cursor: default; }
+
+  /* CHEAT SHEET */
+  .cheat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; max-width: 1100px; margin: 0 auto; }
+  .cheat-card { background: var(--charcoal); padding: 36px 32px; border-top: 2px solid var(--rule); }
+  .cheat-card:nth-child(1) { border-top-color: var(--accent-mindset); }
+  .cheat-card:nth-child(2) { border-top-color: var(--accent-script); }
+  .cheat-card:nth-child(3) { border-top-color: var(--accent-loop); }
+  .cheat-card:nth-child(4) { border-top-color: var(--accent-close); }
+  .cheat-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 18px; }
+  .cheat-card:nth-child(1) .cheat-eyebrow { color: var(--accent-mindset); }
+  .cheat-card:nth-child(2) .cheat-eyebrow { color: var(--accent-script); }
+  .cheat-card:nth-child(3) .cheat-eyebrow { color: var(--accent-loop); }
+  .cheat-card:nth-child(4) .cheat-eyebrow { color: var(--accent-close); }
+  .cheat-card ol, .cheat-card ul { list-style: none; padding: 0; }
+  .cheat-card ol li { padding: 10px 0; border-bottom: 0.5px solid var(--rule); font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--light); line-height: 1.5; }
+  .cheat-card ol li:last-child { border-bottom: none; }
+  .cheat-card ol li b { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.16em; font-weight: 700; color: var(--white); text-transform: uppercase; font-style: normal; display: block; margin-bottom: 4px; }
+  .cheat-card.memo blockquote { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--white); line-height: 1.5; padding: 14px 16px; border-left: 2px solid var(--accent-script); margin-bottom: 14px; background: rgba(61,171,130,0.04); }
+  .cheat-card ul li { padding: 8px 0 8px 20px; position: relative; font-size: 13px; color: var(--light); border-bottom: 0.5px solid var(--rule); }
+  .cheat-card ul li:last-child { border-bottom: none; }
+  .cheat-card ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 8px; height: 0.5px; background: var(--accent-loop); }
+  .cheat-card.key ul li { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--white); }
+  .cheat-card.key ul li::before { background: var(--accent-close); }
+
+  /* MANTRA */
+  .mantra-section { padding: 120px 48px; text-align: center; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(122,116,212,0.06) 0%, transparent 70%); }
+  .mantra-section h2 { font-family: 'UnifrakturCook', cursive; font-size: clamp(40px, 8vw, 80px); color: var(--white); margin-bottom: 20px; line-height: 1.1; letter-spacing: 0.02em; }
+  .mantra-section p { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 2.5vw, 22px); color: var(--muted); font-weight: 300; max-width: 600px; margin: 0 auto 48px; line-height: 1.7; font-style: italic; }
+  .mantra-section p strong { color: var(--white); font-weight: 500; font-style: normal; }
+
+  /* FOOTER */
+  footer { border-top: 0.5px solid var(--rule); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .footer-logo { display: flex; align-items: center; gap: 10px; }
+  .footer-logo-mark { width: 22px; height: 22px; color: var(--dim); }
+  .footer-logo-mark svg { width: 100%; height: 100%; fill: currentColor; }
+  .footer-logo-text { font-family: 'UnifrakturCook', cursive; font-size: 20px; color: var(--dim); letter-spacing: 2px; }
+  .footer-mid { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+  .footer-copy { font-size: 10px; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; }
+  .footer-meta { font-size: 10px; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; }
+  .footer-kin { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dim); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes scrollPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    .nav-links { display: none; }
+    .pillars-grid, .cue-grid, .rounds-grid, .cheat-grid { grid-template-columns: 1fr; }
+    .framework-grid { grid-template-columns: repeat(2, 1fr); }
+    .rhythm-inner { grid-template-columns: 1fr; }
+    .rhythm-item { border-right: none; border-bottom: 0.5px solid var(--rule); padding: 36px 24px; }
+    .rhythm-item:last-child { border-bottom: none; }
+    .step-card { grid-template-columns: 56px 1fr; gap: 20px; padding: 28px 24px; }
+    .step-num { font-size: 42px; }
+    .content-section, .obj-section, .cue-section { padding: 60px 24px; }
+    .pillars-section, .mission { padding: 60px 24px; }
+    .obj-card summary { grid-template-columns: 44px 1fr 24px; padding: 22px 24px; gap: 16px; }
+    .obj-num { font-size: 24px; }
+    .obj-title { font-size: 18px; }
+    .obj-body { padding: 0 24px 28px 24px; }
+    .seq-table td { padding: 14px 16px; font-size: 14px; }
+    .loop5-row { grid-template-columns: 1fr; padding: 18px 22px; gap: 6px; }
+    .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+    footer { flex-direction: column; gap: 16px; }
+    .pull-quote, .mantra-section { padding: 80px 24px; }
+  }
+  @media (max-width: 540px) {
+    .hero-title { font-size: 76px; }
+    .script-block { padding: 28px 24px; }
+    .script-block p.line { font-size: 17px; }
+    .sim-stage { padding: 24px 22px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; color: black; }
+    nav, .scroll-hint, .sim, .hero-d-watermark { display: none; }
+    .hero { min-height: auto; padding: 24px; }
+    .content-section, .obj-section, .cue-section, .pillars-section, .rhythm-section, .mantra-section { page-break-inside: avoid; padding: 24px; border: none; background: white; color: black; }
+    * { color: black !important; background: white !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- INLINE D LOGO SYMBOL -->
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+  <symbol id="d-logo" viewBox="0 0 1280 1229">
+    <g transform="translate(0,1229) scale(0.1,-0.1)" fill="currentColor">
+      <path d="M6075 11203 c-148 -7 -557 -45 -705 -64 -1277 -163 -2441 -695 -3254 -1489 -515 -502 -854 -1068 -971 -1620 -43 -200 -58 -534 -35 -745 46 -412 194 -749 434 -991 251 -252 571 -386 956 -401 551 -21 992 254 1264 787 187 366 268 841 201 1165 -16 75 -44 155 -54 155 -4 0 -27 -30 -51 -67 -156 -237 -383 -432 -584 -500 -102 -35 -240 -39 -324 -10 -280 98 -380 486 -236 917 168 506 584 1021 1149 1420 210 148 540 329 815 445 654 276 1469 413 2182 365 228 -16 677 -76 695 -93 2 -2 -30 -16 -69 -32 -188 -72 -497 -249 -673 -384 -288 -221 -543 -486 -751 -781 -225 -319 -460 -794 -607 -1230 -117 -344 -231 -782 -321 -1231 -43 -215 -149 -846 -211 -1259 -124 -828 -254 -1408 -445 -1995 -87 -266 -139 -397 -155 -391 -66 25 -324 103 -417 126 -693 170 -1427 64 -1943 -281 -129 -86 -294 -247 -373 -361 -308 -450 -272 -983 90 -1339 211 -208 540 -342 933 -380 146 -14 430 -6 570 16 437 69 866 260 1220 544 137 109 359 333 497 499 l27 33 113 -62 c754 -412 1281 -589 1913 -640 214 -17 650 -7 830 20 451 67 793 173 1212 376 452 219 817 480 1194 855 431 429 795 957 1067 1550 315 687 491 1359 542 2075 13 182 13 616 0 781 -13 162 -44 403 -71 542 -261 1372 -1160 2538 -2434 3153 -582 281 -1196 439 -1970 505 -171 15 -1067 27 -1250 17z m2357 -1107 c374 -72 903 -490 1229 -972 122 -181 269 -453 340 -632 320 -795 383 -1791 178 -2806 -135 -668 -490 -1440 -922 -2006 -505 -660 -1042 -1041 -1711 -1214 -199 -52 -329 -67 -603 -73 -408 -9 -671 29 -1103 159 -112 33 -408 135 -418 143 -2 1 53 87 121 191 185 283 239 375 377 649 369 731 554 1427 770 2900 47 326 72 472 141 835 285 1490 614 2298 1081 2650 132 99 228 147 353 175 78 17 80 17 167 1z m-4766 -7531 c107 -16 330 -68 341 -79 16 -16 -117 -195 -242 -325 -249 -258 -531 -385 -855 -384 -171 0 -274 32 -362 111 -106 95 -108 257 -5 393 81 109 201 188 367 243 92 30 155 43 300 60 69 8 357 -4 456 -19z"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <a href="#top" class="nav-logo">
+    <span class="nav-logo-mark"><svg><use href="#d-logo"/></svg></span>
+    <span class="nav-logo-text">Dynasty</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#pillars">Pillars</a></li>
+    <li><a href="#close">The Close</a></li>
+    <li><a href="#objections">Objections</a></li>
+    <li><a href="#practice">Practice</a></li>
+    <li><a href="#cheat">Cheat Sheet</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-d-watermark"><svg><use href="#d-logo"/></svg></div>
+  <div class="hero-eyebrow">Dynasty Field Training &middot; Vol. 01</div>
+  <h1 class="hero-title">Dynasty</h1>
+  <p class="hero-sub">Closing, Objections &amp; Looping</p>
+  <p class="hero-sub-mark">— 101 —</p>
+  <p class="hero-tagline">
+    Most reps don&rsquo;t miss appointments because they don&rsquo;t know enough about solar.<br>
+    They miss them because they <strong>hesitate</strong> when it&rsquo;s time to ask.<br>
+    This is the manual that fixes that.
+  </p>
+  <div class="hero-cta">
+    <a href="#pillars" class="btn-primary">The Four Pillars</a>
+    <a href="#cheat" class="btn-ghost">Cheat Sheet</a>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="mission reveal">
+  <p class="mission-quote">&ldquo;You are not closing a solar deal. You are closing <em>time.</em> You are closing <em>curiosity.</em> You are closing the next conversation.&rdquo;</p>
+  <p class="mission-attr">&mdash; The Setter&rsquo;s Charge</p>
+</section>
+
+<div class="section-divider reveal"><span>The Four Pillars</span></div>
+
+<!-- PILLARS -->
+<section id="pillars" class="pillars-section">
+  <div class="pillars-header reveal">
+    <h2>The whole conversation.<br>Owned at the door.</h2>
+    <p>This playbook isn&rsquo;t just about scripts. It&rsquo;s about building every dimension of how you sell &mdash; because each one feeds the others.</p>
+  </div>
+  <div class="pillars-grid">
+    <a href="#mindset" class="pillar-card mindset reveal">
+      <span class="pillar-number">01</span>
+      <div class="pillar-label">Pillar One</div>
+      <h3 class="pillar-title">Mindset</h3>
+      <p class="pillar-desc">Closing isn&rsquo;t pressure. Closing is leadership. Redefine what closing means before you say a word.</p>
+      <ul class="topic-list">
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The one job</div><div class="topic-desc">Move them to the next conversation</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">Hesitation kills</div><div class="topic-desc">Why setters lose appointments already won</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">Lead, don&rsquo;t beg</div><div class="topic-desc">People follow confident leadership</div></div></li>
+      </ul>
+    </a>
+    <a href="#script" class="pillar-card script reveal">
+      <span class="pillar-number">02</span>
+      <div class="pillar-label">Pillar Two</div>
+      <h3 class="pillar-title">Script &amp; Structure</h3>
+      <p class="pillar-desc">Steps 1&ndash;5 are not just the intro. They are what earns you the right to close. Skip a step, and the close falls flat.</p>
+      <ul class="topic-list">
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The 6-step door approach</div><div class="topic-desc">Intro to scheduling, in order</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The pullback</div><div class="topic-desc">The most underused tool in the script</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">Reading the customer</div><div class="topic-desc">Verbal &amp; nonverbal green lights</div></div></li>
+      </ul>
+    </a>
+    <a href="#close" class="pillar-card close reveal">
+      <span class="pillar-number">03</span>
+      <div class="pillar-label">Pillar Three</div>
+      <h3 class="pillar-title">The Close</h3>
+      <p class="pillar-desc">You&rsquo;re not asking <em>if</em> they want to meet &mdash; you&rsquo;re asking <em>when.</em> The assumptive close, the No close, and the timing that makes it work.</p>
+      <ul class="topic-list">
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The assumptive close</div><div class="topic-desc">Morning or afternoon? 2 or 4?</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The &ldquo;No&rdquo; close</div><div class="topic-desc">Chris Voss&rsquo;s rescue technique</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">When &amp; when not to ask</div><div class="topic-desc">Reading green lights and danger zones</div></div></li>
+      </ul>
+    </a>
+    <a href="#looping" class="pillar-card loop reveal">
+      <span class="pillar-number">04</span>
+      <div class="pillar-label">Pillar Four</div>
+      <h3 class="pillar-title">Objections &amp; Looping</h3>
+      <p class="pillar-desc">An objection is not a stop sign. It&rsquo;s a speed bump. Acknowledge, reframe, rebuild value, and close again.</p>
+      <ul class="topic-list">
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The 4-step framework</div><div class="topic-desc">Acknowledge, validate, reframe, close</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The five-part loop</div><div class="topic-desc">Adds rebuilding value before re-closing</div></div></li>
+        <li class="topic-item"><div class="topic-dot"></div><div class="topic-content"><div class="topic-name">The two-loop limit</div><div class="topic-desc">Confidence vs. neediness</div></div></li>
+      </ul>
+    </a>
+  </div>
+</section>
+
+<!-- PILLAR ONE: MINDSET -->
+<section id="mindset" class="content-section">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-mindset">Pillar One &middot; Mindset</div>
+      <h2>Closing is not pressure.<br>Closing is <em>leadership.</em></h2>
+      <p>At the door, the customer doesn&rsquo;t know what the next step is. They don&rsquo;t know how solar works. They don&rsquo;t know if this is worth their time. If you sound unsure &mdash; they default to &ldquo;I&rsquo;m good, thanks.&rdquo;</p>
+    </div>
+
+    <div class="prose reveal">
+      <p>For an appointment setter, closing is simply moving the conversation to the next step. That next step is getting the homeowner to agree to sit down with the closer and see the numbers.</p>
+      <p>The customer is listening. The conversation is going well. There are clear signs of interest. And then &mdash; the setter keeps talking instead of closing. Because closing feels uncomfortable. It feels like pressure.</p>
+      <p><em>That is the wrong definition of closing.</em></p>
+    </div>
+  </div>
+</section>
+
+<section class="rhythm-section reveal">
+  <div class="rhythm-inner">
+    <div class="rhythm-item">
+      <div class="rhythm-num">01</div>
+      <div class="rhythm-label">You are not closing</div>
+      <div class="rhythm-desc">A solar deal.</div>
+    </div>
+    <div class="rhythm-item">
+      <div class="rhythm-num">02</div>
+      <div class="rhythm-label">You are closing</div>
+      <div class="rhythm-desc">A time slot. A seat at the table.</div>
+    </div>
+    <div class="rhythm-item">
+      <div class="rhythm-num">03</div>
+      <div class="rhythm-label">The win looks like</div>
+      <div class="rhythm-desc">A confirmed appointment with all decision-makers present.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR TWO: SCRIPT -->
+<section id="script" class="content-section alt">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-script">Pillar Two &middot; Script &amp; Structure</div>
+      <h2>The six-step door approach.</h2>
+      <p>Steps one through five are not just an introduction &mdash; they are what earns you the right to close. Every step builds permission.</p>
+    </div>
+
+    <div class="step-grid reveal">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body"><h4>Intro</h4><p>Build rapport. You are not a stranger &mdash; you are from the neighborhood. Warmth here creates openness later.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body"><h4>Problem</h4><p>This is where you find the pain. Ask about the bill. React to it. If they feel no pain, they feel no urgency. No urgency, no appointment.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body"><h4>Solution</h4><p>Brief. You are not explaining solar &mdash; you are introducing the idea that there is a better option. Point to roofs. Create curiosity.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body"><h4>Building Value</h4><p>The new program removes every objection about cost. No out-of-pocket. No loan. Replaces the bill. This is the &ldquo;what if this were free&rdquo; moment.</p></div>
+      </div>
+      <div class="step-card crit">
+        <div class="step-num">5</div>
+        <div class="step-body"><h4>Pullback &mdash; The Pre-Close <span class="step-flag crit">Critical</span></h4><p>Only 1 in 4 homes qualify. This creates scarcity and urgency. Deliver this confidently. It is what makes step 6 feel logical.</p></div>
+      </div>
+      <div class="step-card win">
+        <div class="step-num">6</div>
+        <div class="step-body"><h4>Close + Scheduling <span class="step-flag win">The Close</span></h4><p>Morning or afternoon. Then 2pm or 4pm. You are not asking if they want an appointment &mdash; you are assuming they do.</p></div>
+      </div>
+    </div>
+
+    <div class="script-block acc-close reveal" style="max-width:760px;margin-left:auto;margin-right:auto;">
+      <div class="label">Script &middot; Step 5 Pullback</div>
+      <p class="dir">Step back. Hands up.</p>
+      <p class="line">&ldquo;My job is simple. I am not here to have y&rsquo;all decide whether you want to go solar or not. I just determine if you and your property would <strong>qualify</strong> for this brand new program. The hard part is &mdash; with this program &mdash; typically only <strong>1 out of 4 homes</strong> are eligible.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMING -->
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-script">Timing</div>
+      <h2>When to ask for the business.</h2>
+      <p>Asking at the wrong time will kill an appointment even when the customer is interested. The signals are there &mdash; most setters just aren&rsquo;t trained to see them.</p>
+    </div>
+
+    <div class="prose reveal">
+      <p><strong>The danger zones.</strong> Asking before establishing bill pain &mdash; no pain, no motivation. Asking before the pullback &mdash; the appointment feels low-value and easy to skip. Over-explaining solar &mdash; questions create doubt, doubt kills momentum. Waiting for a &ldquo;perfect moment&rdquo; that never comes. Re-opening the conversation after the close &mdash; once you&rsquo;ve asked, be quiet.</p>
+    </div>
+
+    <ul class="checklist reveal" style="margin-top:36px;">
+      <li><span class="check-mark">&check;</span><span>They answered your bill question and reacted to the number.</span></li>
+      <li><span class="check-mark">&check;</span><span>They didn&rsquo;t walk away or shut the conversation down during your pitch.</span></li>
+      <li><span class="check-mark">&check;</span><span>They&rsquo;re still making eye contact and facing you.</span></li>
+      <li><span class="check-mark">&check;</span><span>You have delivered the pullback &mdash; the 1-in-4 line.</span></li>
+      <li><span class="check-mark">&check;</span><span>There is a natural pause in the conversation.</span></li>
+    </ul>
+
+    <div class="pull-quote reveal">
+      <div class="pull-quote-mark">&ldquo;</div>
+      <p class="pull-quote-text">You don&rsquo;t need them to say &ldquo;I&rsquo;m interested&rdquo; to go for the close. You need them to <strong>still be standing there.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- READING THE CUSTOMER -->
+<section class="cue-section">
+  <div class="content-header reveal">
+    <div class="eyebrow acc-script">Reading the Customer</div>
+    <h2>Verbal cues at the door.</h2>
+  </div>
+  <div class="cue-grid reveal">
+    <div class="cue-col green">
+      <div class="cue-col-head">Ready &middot; Green Light</div>
+      <ul class="cue-list">
+        <li>&ldquo;How does that work?&rdquo;</li>
+        <li>&ldquo;Wait, there&rsquo;s no out-of-pocket cost?&rdquo;</li>
+        <li>&ldquo;Yeah, our bill has been crazy.&rdquo;</li>
+        <li>&ldquo;My neighbor got solar &mdash; I&rsquo;ve been curious.&rdquo;</li>
+        <li>&ldquo;So what&rsquo;s the catch?&rdquo; <em>(curiosity, not resistance)</em></li>
+        <li>&ldquo;Who would come out?&rdquo;</li>
+        <li>&ldquo;Do you need to see my bill?&rdquo;</li>
+        <li>&ldquo;Would we qualify?&rdquo;</li>
+      </ul>
+    </div>
+    <div class="cue-col red">
+      <div class="cue-col-head">Not Ready &middot; Red Flag</div>
+      <ul class="cue-list">
+        <li>&ldquo;We&rsquo;re renting.&rdquo;</li>
+        <li>&ldquo;I need to talk to my spouse.&rdquo;</li>
+        <li>&ldquo;We already have solar.&rdquo;</li>
+        <li>&ldquo;I&rsquo;m really busy right now.&rdquo;</li>
+        <li>&ldquo;We&rsquo;re not interested in solar.&rdquo;</li>
+        <li>&ldquo;Can you leave something and I&rsquo;ll look at it?&rdquo;</li>
+        <li>&ldquo;We don&rsquo;t make decisions like that.&rdquo;</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cue-section" style="border-top:none;padding-top:0;">
+  <div class="content-header reveal">
+    <div class="eyebrow acc-script">Body Language</div>
+    <h2>Nonverbal cues.</h2>
+  </div>
+  <div class="cue-grid reveal">
+    <div class="cue-col green">
+      <div class="cue-col-head">Ready &middot; Open</div>
+      <ul class="cue-list">
+        <li>Leaning forward slightly.</li>
+        <li>Nodding while you speak.</li>
+        <li>Sustained eye contact.</li>
+        <li>Body turned toward you.</li>
+        <li>Calling spouse to the door.</li>
+        <li>Looking at neighbors&rsquo; roofs when you point.</li>
+        <li>Phone or keys put away.</li>
+        <li>Stepping slightly off the porch.</li>
+      </ul>
+    </div>
+    <div class="cue-col red">
+      <div class="cue-col-head">Not Ready &middot; Closed</div>
+      <ul class="cue-list">
+        <li>Arms tightly crossed.</li>
+        <li>Body turned sideways toward door.</li>
+        <li>Hand on the door handle.</li>
+        <li>Looking inside the house repeatedly.</li>
+        <li>Not making eye contact.</li>
+        <li>Checking phone while you talk.</li>
+        <li>Short clipped answers, no follow-up.</li>
+        <li>Stepping back as you continue.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR THREE: THE CLOSE -->
+<section id="close" class="content-section alt">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-close">Pillar Three &middot; The Close</div>
+      <h2>The assumptive close.</h2>
+      <p>Speak and act as if the appointment is already happening. You are not asking <em>if</em> they want to meet &mdash; you are asking <em>when.</em></p>
+    </div>
+
+    <div class="cue-grid reveal" style="margin-bottom:48px;">
+      <div class="cue-col red">
+        <div class="cue-col-head">Weak &middot; Asking If</div>
+        <ul class="cue-list">
+          <li>&ldquo;Would you be interested in a consultation?&rdquo;</li>
+          <li>&ldquo;Do you want me to set something up?&rdquo;</li>
+          <li>&ldquo;Would it be okay if someone came out?&rdquo;</li>
+          <li>&ldquo;Are you open to hearing more?&rdquo;</li>
+          <li>&ldquo;I could have someone reach out to you&hellip;&rdquo;</li>
+        </ul>
+      </div>
+      <div class="cue-col green">
+        <div class="cue-col-head">Strong &middot; Assumptive</div>
+        <ul class="cue-list">
+          <li>&ldquo;Are you guys more of a morning or afternoon type?&rdquo;</li>
+          <li>&ldquo;I have a couple openings &mdash; does 2 or 4 work better?&rdquo;</li>
+          <li>&ldquo;My energy specialist will be in your area tomorrow.&rdquo;</li>
+          <li>&ldquo;I just need a couple quick pieces of info.&rdquo;</li>
+          <li>&ldquo;Do you have a corner of a table I can write on?&rdquo;</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="script-block acc-close reveal" style="max-width:820px;margin-left:auto;margin-right:auto;">
+      <div class="label">Script &middot; Full Assumptive Close</div>
+      <p class="dir">After the Pullback &mdash; Step 5</p>
+      <p class="line">&ldquo;So my energy specialist will be out here tomorrow going over these reports with some of your neighbors in the morning and later in the afternoon. They basically just sit down and go over: what it is, how it works, and how much you&rsquo;d be saving if you get selected.&rdquo;</p>
+      <p class="dir">Assumptive question</p>
+      <p class="line">&ldquo;With that said &mdash; are you guys more of a <strong>morning or afternoon</strong> type of people?&rdquo;</p>
+      <p class="dir">They answer &mdash; pull out phone, act busy</p>
+      <p class="line">&ldquo;Sounds good. I&rsquo;ve got a couple of openings left. Does <strong>2pm or 4pm</strong> work better for you?&rdquo;</p>
+      <p class="dir">They pick &mdash; confirm, roll forward</p>
+      <p class="line">&ldquo;Perfect. Since this is a state program there are a couple of quick qualifying questions&hellip;&rdquo;</p>
+    </div>
+
+    <div class="pull-quote reveal">
+      <div class="pull-quote-mark">&ldquo;</div>
+      <p class="pull-quote-text">Okay, I just need a couple pieces of information and I&rsquo;ll be out of your hair. <strong>Do you have a corner of a table I can write on?</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- THE NO CLOSE -->
+<section id="noclose" class="content-section">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-close">The Rescue Technique</div>
+      <h2>The &ldquo;No&rdquo; close.<br><em>&mdash; Chris Voss method</em></h2>
+      <p>People are uncomfortable saying YES to a stranger. Yes feels like commitment. Yes feels like they owe something. But No feels safe. No feels like control.</p>
+    </div>
+
+    <div class="prose reveal">
+      <p>So you ask questions designed to get a No &mdash; that actually move them <em>forward.</em> The &ldquo;No&rdquo; close is your <strong>rescue technique.</strong> Use it after the assumptive close has met resistance. Do not lead with it &mdash; it works because it feels different from the assumptive.</p>
+    </div>
+
+    <div class="script-block acc-loop reveal" style="max-width:820px;margin:36px auto 0;">
+      <div class="label">Script &middot; Deploy the No Close</div>
+      <p class="dir">They say: &ldquo;I don&rsquo;t know, I need to think about it.&rdquo;</p>
+      <p class="dir">Calm, non-reactive, empathetic tone</p>
+      <p class="line">&ldquo;Hey, I completely understand. <strong>Would it be completely unreasonable</strong> just to hear what the numbers look like? No pressure, no obligation. If it does not make sense, you just say no and that&rsquo;s it. <strong>Would that be completely out of the question?</strong>&rdquo;</p>
+      <p class="dir">&mdash; or &mdash;</p>
+      <p class="line">&ldquo;Is it that you are <strong>against</strong> seeing what you might be saving?&rdquo;</p>
+      <p class="dir">&mdash; or &mdash;</p>
+      <p class="line">&ldquo;Would it be fair to at least see if your home qualifies before deciding?&rdquo;</p>
+    </div>
+
+    <table class="seq-table reveal" style="margin-top:48px;">
+      <tbody>
+        <tr><td>01</td><td>You deliver the assumptive close</td><td>&ldquo;Morning or afternoon? Does 2 or 4 work better?&rdquo;</td></tr>
+        <tr><td>02</td><td>Customer shows resistance</td><td>&ldquo;I don&rsquo;t know &middot; I need to think &middot; maybe later&rdquo;</td></tr>
+        <tr><td>03</td><td>Deploy the No close</td><td>&ldquo;Would it be completely unreasonable&hellip;&rdquo;</td></tr>
+        <tr><td>04a</td><td>They re-engage <em>(common)</em></td><td>Continue to qualifying questions, go inside.</td></tr>
+        <tr><td>04b</td><td>They hold firm</td><td>Do not push. Move to graceful exit.</td></tr>
+        <tr><td>05</td><td>Graceful exit</td><td>&ldquo;Not every home is the right fit. I appreciate your time.&rdquo;</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PILLAR FOUR: OBJECTIONS & LOOPING -->
+<section id="looping" class="content-section alt">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-loop">Pillar Four &middot; Objections &amp; Looping</div>
+      <h2>An objection is a speed bump.<br>Not a stop sign.</h2>
+      <p>Most reps don&rsquo;t lose appointments because the customer had a brilliant objection. They lose because they get nervous, explain too much, give away control, or forget to close again after answering.</p>
+    </div>
+
+    <div class="framework-grid reveal">
+      <div class="fw-card">
+        <div class="fw-num">01</div>
+        <div class="fw-label">Step One</div>
+        <h4 class="fw-title">Acknowledge</h4>
+        <p class="fw-desc">Show them you heard the concern. Stay calm and human.</p>
+        <div class="fw-quote">&ldquo;Totally fair.&rdquo;</div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-num">02</div>
+        <div class="fw-label">Step Two</div>
+        <h4 class="fw-title">Validate</h4>
+        <p class="fw-desc">Make the concern feel normal instead of arguing with it.</p>
+        <div class="fw-quote">&ldquo;Most people feel the same way at first.&rdquo;</div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-num">03</div>
+        <div class="fw-label">Step Three</div>
+        <h4 class="fw-title">Reframe</h4>
+        <p class="fw-desc">Move from buying solar to seeing if the numbers make sense.</p>
+        <div class="fw-quote">&ldquo;You are not deciding today.&rdquo;</div>
+      </div>
+      <div class="fw-card">
+        <div class="fw-num">04</div>
+        <div class="fw-label">Step Four</div>
+        <h4 class="fw-title">Close Again</h4>
+        <p class="fw-desc">Return to a time choice. This is what most reps forget.</p>
+        <div class="fw-quote">&ldquo;Would 2 or 4 work better?&rdquo;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAY IN YOUR LANE -->
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-loop">Discipline</div>
+      <h2>Stay in your lane.</h2>
+    </div>
+    <div class="prose reveal">
+      <p>Your job is not to answer every solar question. Your job is to <strong>protect the appointment.</strong> The moment you start fully explaining equipment, utility rates, tax credits, warranties, batteries, net metering, financing, or proposal numbers &mdash; you are now doing the closer&rsquo;s job at the wrong time with the wrong tools.</p>
+      <p>The customer starts analyzing before they have the full picture. Analysis creates more questions. More questions create doubt. Doubt kills momentum.</p>
+    </div>
+
+    <div class="pull-quote reveal">
+      <div class="pull-quote-mark">&ldquo;</div>
+      <p class="pull-quote-text">Answer briefly. <strong>Reframe the concern.</strong> Loop back to the appointment. Do not become the proposal at the home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE 10-MINUTE LOOPING MODULE -->
+<section class="content-section alt">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-mindset">The Module</div>
+      <h2>The 10-minute looping module.</h2>
+      <p>Use this as a clean ten-minute section inside your training meeting. Teach it in this order.</p>
+    </div>
+
+    <ul class="timeline-list reveal">
+      <li class="timeline-item"><div class="timeline-stamp">0&ndash;2 min</div><div><div class="timeline-h4">Define looping</div><div class="timeline-p">Looping means handling the objection and returning to the close.</div></div></li>
+      <li class="timeline-item"><div class="timeline-stamp">2&ndash;4 min</div><div><div class="timeline-h4">Why reps lose</div><div class="timeline-p">They answer the concern but forget to re-close.</div></div></li>
+      <li class="timeline-item"><div class="timeline-stamp">4&ndash;7 min</div><div><div class="timeline-h4">Teach the five-part loop</div><div class="timeline-p">Acknowledge &middot; Validate &middot; Reframe &middot; Rebuild value &middot; Close again.</div></div></li>
+      <li class="timeline-item"><div class="timeline-stamp">7&ndash;9 min</div><div><div class="timeline-h4">Demonstrate</div><div class="timeline-p">Run &ldquo;I need to think about it&rdquo; and &ldquo;I am not interested.&rdquo;</div></div></li>
+      <li class="timeline-item"><div class="timeline-stamp">9&ndash;10 min</div><div><div class="timeline-h4">Set the standard</div><div class="timeline-p">Every objection response ends with a time choice or a controlled No close.</div></div></li>
+    </ul>
+
+    <div style="margin-top:64px;">
+      <div class="content-header reveal">
+        <div class="eyebrow acc-loop">The Loop</div>
+        <h2>The five-part loop.</h2>
+      </div>
+      <div class="loop5 reveal">
+        <div class="loop5-row"><b>1 &middot; Acknowledge</b><span>&ldquo;I get that.&rdquo;</span></div>
+        <div class="loop5-row"><b>2 &middot; Validate</b><span>&ldquo;Most people feel that way at first.&rdquo;</span></div>
+        <div class="loop5-row"><b>3 &middot; Reframe</b><span>&ldquo;You are not deciding on solar today.&rdquo;</span></div>
+        <div class="loop5-row"><b>4 &middot; Rebuild value</b><span>&ldquo;The only question is whether the numbers are lower than your current bill.&rdquo;</span></div>
+        <div class="loop5-row loop5-final"><b>5 &middot; Close again</b><span>&ldquo;Are you better around 2 or 4?&rdquo;</span></div>
+      </div>
+
+      <div class="pull-quote reveal">
+        <div class="pull-quote-mark">&ldquo;</div>
+        <p class="pull-quote-text">If you answer the objection but do not close again, <strong>you did not handle the objection.</strong> You just had a conversation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO LOOP LIMIT -->
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-close">Limits</div>
+      <h2>The two-loop limit.</h2>
+      <p>Looping gives you control, but it has a limit. The goal is not to chase someone forever &mdash; it&rsquo;s to professionally handle resistance and create a fair chance for the appointment.</p>
+    </div>
+
+    <div class="rhythm-inner reveal" style="border-top:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);">
+      <div class="rhythm-item">
+        <div class="rhythm-num">02</div>
+        <div class="rhythm-label">Loops Maximum</div>
+        <div class="rhythm-desc">After two strong loops, you book it or exit professionally.</div>
+      </div>
+      <div class="rhythm-item">
+        <div class="rhythm-num">01</div>
+        <div class="rhythm-label">No Close</div>
+        <div class="rhythm-desc">Used after resistance, only if the assumptive didn&rsquo;t land.</div>
+      </div>
+      <div class="rhythm-item">
+        <div class="rhythm-num">00</div>
+        <div class="rhythm-label">Desperate Lines</div>
+        <div class="rhythm-desc">Past two loops, you start sounding needy. Exit cleanly.</div>
+      </div>
+    </div>
+
+    <div class="script-block acc-loop reveal" style="max-width:760px;margin:48px auto 0;">
+      <div class="label">Clean Exit Script</div>
+      <p class="line">&ldquo;Totally understand. Not every home is the right fit. <strong>I appreciate your time.</strong>&rdquo;</p>
+      <p class="dir">Then leave calmly. Do not act irritated. Do not toss in one more desperate line from the sidewalk. Move to the next home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON OBJECTIONS -->
+<section id="objections" class="obj-section">
+  <div class="content-header reveal">
+    <div class="eyebrow acc-loop">The Playbook</div>
+    <h2>Common objections.<br>The correct loop.</h2>
+    <p>Tap any objection to expand the full response.</p>
+  </div>
+  <div class="obj-grid reveal">
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">01</div>
+        <div class="obj-title">&ldquo;I need to talk to my spouse.&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Don&rsquo;t fight the spouse objection. Use it as the reason for the appointment.</p>
+        <p><b>If spouse is home:</b> &ldquo;Totally understand. Is he home right now? I&rsquo;d rather give both of you the quick version so nobody has to repeat it wrong later. It&rsquo;ll take two minutes.&rdquo;</p>
+        <p><b>If spouse is not home:</b> <span class="line">&ldquo;Completely fair. That&rsquo;s actually why we want both of you there for the quick sit-down. Nobody is deciding anything without them. The whole point is just to see if the home qualifies. Are evenings usually better when both of you are home?&rdquo;</span></p>
+        <p class="close"><b>Then close</b><em>&ldquo;Got it. I have 6 or 7 tomorrow. Which one is better?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">02</div>
+        <div class="obj-title">&ldquo;I am too busy.&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Busy is not a no. Busy means schedule.</p>
+        <p class="line">&ldquo;Totally get it. I am not trying to hold you up right now. That is actually why we schedule it. My guy comes back when it is convenient, shows you the numbers, and you can see if it is even worth your time. Are you usually better earlier or later in the day?&rdquo;</p>
+        <p class="close"><b>If they say &ldquo;come back another time&rdquo;</b><em>&ldquo;Perfect. That&rsquo;s what I&rsquo;m trying to lock in so we don&rsquo;t catch you at a bad time again. Tomorrow, would 2 or 4 be better?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">03</div>
+        <div class="obj-title">&ldquo;We are not interested.&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Reframe from &ldquo;buy solar&rdquo; to &ldquo;qualify and compare numbers.&rdquo;</p>
+        <p class="line">&ldquo;Totally fair. Most people say that because they think I am asking them to buy solar today. I am not. My job is just to see if the home would even qualify for the newer program. If the numbers are not lower than what you already pay, it would not make sense anyway. Would it be completely unreasonable just to see if your home qualifies?&rdquo;</p>
+        <p class="close"><b>Close</b><em>&ldquo;My guy is already in the area tomorrow. Are you more of an afternoon or evening type?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">04</div>
+        <div class="obj-title">&ldquo;I already looked into solar &mdash; it didn&rsquo;t make sense.&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Agree first. Then separate the old program from the current conversation.</p>
+        <p class="line">&ldquo;Honestly, that makes sense. A lot of the older programs did not pencil out for people. That is exactly why we are checking homes again. The only reason this is worth a conversation is because the structure is different now. My guy can show you side by side if it is better or if it is still not worth it.&rdquo;</p>
+        <p class="close"><b>Close</b><em>&ldquo;Would 2 or 4 be better tomorrow?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">05</div>
+        <div class="obj-title">&ldquo;Can you leave me something?&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Literature does not create certainty. Specific numbers do.</p>
+        <p class="line">&ldquo;Sure, I can leave you something. The problem is the paper will not tell you if your specific home qualifies or what your numbers look like. That is the part my guy has to run with you. It is quick. If it does not make sense, you say no. Are you usually home more in the afternoon or evening?&rdquo;</p>
+        <p class="line"><strong>Stronger version:</strong> &ldquo;I can, but honestly it will not answer the only question that matters &mdash; whether your bill actually goes down. That is why we do the quick sit-down.&rdquo;</p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">06</div>
+        <div class="obj-title">&ldquo;What is the catch?&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>&ldquo;What is the catch?&rdquo; usually means they are listening. Don&rsquo;t panic.</p>
+        <p class="line">&ldquo;Good question. The catch is not every home qualifies, and if the numbers are not better than what you already pay, it would not make sense. That is exactly what the appointment is for. My guy shows you what it is, how it works, and whether it actually saves you money. If it does not, you do nothing.&rdquo;</p>
+        <p class="close"><b>Close</b><em>&ldquo;He is here tomorrow. Are you better around 2 or 4?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">07</div>
+        <div class="obj-title">&ldquo;How much does it cost?&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Never guess numbers. A guessed number creates a future cancellation.</p>
+        <p class="line">&ldquo;That is exactly what my guy shows you. It depends on the home, the usage, and whether the property qualifies. The important part is we are looking to replace what you already pay with something lower. If it is not lower, you would not do it anyway. That is why we run the numbers.&rdquo;</p>
+        <p class="close"><b>Close</b><em>&ldquo;Are you guys usually better afternoons or evenings?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">08</div>
+        <div class="obj-title">&ldquo;I do not want a loan.&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Do not over-explain financing. Protect the appointment.</p>
+        <p class="line">&ldquo;Totally understand. Most people do not want another loan either. That is why this is worth looking at. My guy can show you the structure and whether it is actually replacing the utility bill instead of adding a big new payment. If it does not make sense, you do not move forward.&rdquo;</p>
+        <p class="close"><b>Close</b><em>&ldquo;He is in the area tomorrow. Would 2 or 4 work better?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">09</div>
+        <div class="obj-title">&ldquo;We are moving soon.&rdquo;</div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p class="teach"><b>Teaching point</b>Clarify before you disqualify.</p>
+        <p class="line">&ldquo;That makes sense. Depending on how soon, it may or may not be worth it. That is exactly why it is better to have my guy look at it quickly instead of guessing. Are you moving in the next few months or just sometime down the road?&rdquo;</p>
+        <p class="close"><b>If down the road</b><em>&ldquo;Got it. Then it&rsquo;s probably still worth seeing the numbers. Would tomorrow afternoon or evening be better?&rdquo;</em></p>
+      </div>
+    </details>
+
+    <details class="obj-card">
+      <summary>
+        <div class="obj-num">10</div>
+        <div class="obj-title">&ldquo;We&rsquo;re renting.&rdquo; <em style="color:var(--dim);font-size:14px;">&mdash; polite exit</em></div>
+        <div class="obj-toggle">+</div>
+      </summary>
+      <div class="obj-body">
+        <p>Renters do not qualify. Politely disengage &mdash; do not waste time pitching.</p>
+        <p class="close"><b>Exit</b><em>&ldquo;Got it &mdash; this program is only available for homeowners. I appreciate your time!&rdquo;</em></p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- LIVE PRACTICE -->
+<section id="practice" class="content-section">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-mindset">Live Practice</div>
+      <h2>Reps. Out loud.</h2>
+      <p>Reading isn&rsquo;t enough. The door is a live environment. Say the words out loud until they feel natural &mdash; not memorized.</p>
+    </div>
+
+    <div class="rounds-grid reveal">
+      <div class="round-card">
+        <div class="round-eyebrow">Round 01 &middot; Assumptive</div>
+        <h4 class="round-h">The assumptive close.</h4>
+        <p><b>Trainer plays</b>A homeowner who is mildly interested but passive. Don&rsquo;t make it easy.</p>
+        <p><b>Setter must</b>Run from the pullback through the scheduling close using assumptive language.</p>
+        <p class="round-listen">Listen for: &ldquo;Morning or afternoon?&rdquo; &rarr; &ldquo;Does 2 or 4 work better?&rdquo;</p>
+      </div>
+      <div class="round-card">
+        <div class="round-eyebrow">Round 02 &middot; The No Close</div>
+        <h4 class="round-h">After resistance.</h4>
+        <p><b>Trainer plays</b>A homeowner who resists after the assumptive close. Says: &ldquo;I really need to think about it.&rdquo;</p>
+        <p><b>Setter must</b>Deploy the No close correctly without getting salesy.</p>
+        <p class="round-listen">Listen for: &ldquo;Would it be completely unreasonable&hellip;&rdquo;</p>
+      </div>
+    </div>
+
+    <!-- SIMULATOR -->
+    <div class="sim reveal">
+      <div class="sim-controls">
+        <button class="sim-btn" data-sim="0">Spouse</button>
+        <button class="sim-btn" data-sim="1">Too Busy</button>
+        <button class="sim-btn" data-sim="2">Not Interested</button>
+        <button class="sim-btn" data-sim="3">Already Looked</button>
+        <button class="sim-btn" data-sim="4">Leave Something</button>
+        <button class="sim-btn" data-sim="5">What&rsquo;s the Catch</button>
+        <button class="sim-btn" data-sim="6">How Much</button>
+        <button class="sim-btn" data-sim="7">No Loan</button>
+        <button class="sim-btn" data-sim="8">Moving Soon</button>
+      </div>
+      <div class="sim-stage">
+        <div class="sim-block sim-customer" id="simCustomer">
+          <div class="sim-tag">Customer</div>
+          <p>Pick an objection above to begin.</p>
+        </div>
+        <div class="sim-block sim-setter" id="simSetter">
+          <div class="sim-tag">Setter</div>
+          <p></p>
+        </div>
+      </div>
+      <button class="sim-reveal" id="simReveal" disabled>Reveal looped response &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- CHEAT SHEET -->
+<section id="cheat" class="content-section alt">
+  <div class="content-inner">
+    <div class="content-header reveal">
+      <div class="eyebrow acc-close">Quick Reference</div>
+      <h2>Cheat sheet.</h2>
+      <p>The shortest path from objection to appointment.</p>
+    </div>
+
+    <div class="cheat-grid reveal">
+      <div class="cheat-card">
+        <div class="cheat-eyebrow">The Looping Formula</div>
+        <ol>
+          <li><b>Acknowledge</b>&ldquo;I get that.&rdquo;</li>
+          <li><b>Validate</b>&ldquo;Most people feel that way at first.&rdquo;</li>
+          <li><b>Reframe</b>&ldquo;You are not deciding today.&rdquo;</li>
+          <li><b>Rebuild value</b>&ldquo;The only question is whether the numbers are better than what you already pay.&rdquo;</li>
+          <li><b>Close again</b>&ldquo;Would 2 or 4 work better?&rdquo;</li>
+        </ol>
+      </div>
+
+      <div class="cheat-card memo">
+        <div class="cheat-eyebrow">Memorize These Three Lines</div>
+        <blockquote>&ldquo;You are not deciding anything today. You are just seeing if the home qualifies.&rdquo;</blockquote>
+        <blockquote>&ldquo;If the numbers are not lower than what you already pay, it would not make sense anyway.&rdquo;</blockquote>
+        <blockquote>&ldquo;Would it be completely unreasonable to at least see what the numbers look like?&rdquo;</blockquote>
+      </div>
+
+      <div class="cheat-card">
+        <div class="cheat-eyebrow">The Green Lights</div>
+        <ul>
+          <li>They reacted to the bill number</li>
+          <li>They didn&rsquo;t shut you down</li>
+          <li>They&rsquo;re still making eye contact</li>
+          <li>You delivered the pullback</li>
+          <li>There&rsquo;s a natural pause</li>
+        </ul>
+      </div>
+
+      <div class="cheat-card key">
+        <div class="cheat-eyebrow">The Words You Live By</div>
+        <ul>
+          <li>Morning or afternoon?</li>
+          <li>2 or 4?</li>
+          <li>Would it be completely unreasonable&hellip;?</li>
+          <li>Is it that you are <em>against</em> seeing what you might be saving?</li>
+          <li>Do you have a corner of a table I can write on?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANTRA -->
+<section class="mantra-section">
+  <h2 class="reveal">Go set appointments.</h2>
+  <p class="reveal">Every objection gets handled calmly. Every answer gets looped back to the appointment.<br><strong>Every close gets delivered with confidence.</strong></p>
+  <a href="#pillars" class="btn-primary reveal">Back to the Four Pillars</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <span class="footer-logo-mark"><svg><use href="#d-logo"/></svg></span>
+    <span class="footer-logo-text">Dynasty</span>
+  </div>
+  <div class="footer-mid">
+    <div class="footer-copy">&copy; Dynasty Field Training Division</div>
+    <div class="footer-meta">Closing &middot; Objections &middot; Looping &middot; Vol. 01</div>
+    <div class="footer-meta" style="margin-top:6px;">Created by Blake Allen</div>
+  </div>
+  <div class="footer-kin">For the Door.</div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, i) {
+      if (entry.isIntersecting) {
+        setTimeout(function(){ entry.target.classList.add('visible'); }, i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  for (var i = 0; i < reveals.length; i++) observer.observe(reveals[i]);
+
+  // Practice simulator
+  var SIM_DATA = [
+    { c: '\u201CI need to talk to my spouse.\u201D',
+      s: '\u201CCompletely fair. That\u2019s actually why we want both of you there for the quick sit-down. Nobody is deciding anything without them. The whole point is just to see if the home qualifies. Are evenings usually better when both of you are home? Got it \u2014 I have 6 or 7 tomorrow. Which one is better?\u201D' },
+    { c: '\u201CI am too busy.\u201D',
+      s: '\u201CTotally get it. I am not trying to hold you up right now. That is actually why we schedule it. My guy comes back when it is convenient, shows you the numbers, and you can see if it is even worth your time. Tomorrow, would 2 or 4 be better?\u201D' },
+    { c: '\u201CWe are not interested.\u201D',
+      s: '\u201CTotally fair. Most people say that because they think I am asking them to buy solar today. I am not. My job is just to see if the home would even qualify. If the numbers are not lower than what you already pay, it would not make sense anyway. Would it be completely unreasonable just to see if your home qualifies? My guy is in the area tomorrow \u2014 are you more of an afternoon or evening type?\u201D' },
+    { c: '\u201CI already looked into solar \u2014 it didn\u2019t make sense.\u201D',
+      s: '\u201CHonestly, that makes sense. A lot of the older programs did not pencil out. That is exactly why we are checking homes again. The structure is different now. My guy can show you side by side if it is better or if it is still not worth it. Would 2 or 4 be better tomorrow?\u201D' },
+    { c: '\u201CCan you leave me something?\u201D',
+      s: '\u201CSure, I can leave you something. The problem is the paper will not tell you if your specific home qualifies or what your numbers look like. That is the part my guy has to run with you. It is quick. If it does not make sense, you say no. Are you usually home more in the afternoon or evening?\u201D' },
+    { c: '\u201CWhat is the catch?\u201D',
+      s: '\u201CGood question. The catch is not every home qualifies, and if the numbers are not better than what you already pay, it would not make sense. That is exactly what the appointment is for. He is here tomorrow \u2014 are you better around 2 or 4?\u201D' },
+    { c: '\u201CHow much does it cost?\u201D',
+      s: '\u201CThat is exactly what my guy shows you. It depends on the home, the usage, and whether the property qualifies. The important part is we are looking to replace what you already pay with something lower. Are you guys usually better afternoons or evenings?\u201D' },
+    { c: '\u201CI do not want a loan.\u201D',
+      s: '\u201CTotally understand. Most people do not want another loan either. That is why this is worth looking at. My guy can show you the structure and whether it is actually replacing the utility bill instead of adding a big new payment. He is in the area tomorrow \u2014 would 2 or 4 work better?\u201D' },
+    { c: '\u201CWe are moving soon.\u201D',
+      s: '\u201CThat makes sense. Depending on how soon, it may or may not be worth it. That is exactly why it is better to have my guy look at it quickly. Are you moving in the next few months or just sometime down the road? If down the road \u2014 would tomorrow afternoon or evening be better?\u201D' }
+  ];
+  var simBtns = document.querySelectorAll('.sim-btn');
+  var simCustomer = document.getElementById('simCustomer');
+  var simSetter = document.getElementById('simSetter');
+  var simReveal = document.getElementById('simReveal');
+  var current = null;
+  for (var b = 0; b < simBtns.length; b++) {
+    (function(btn){
+      btn.addEventListener('click', function(){
+        for (var k = 0; k < simBtns.length; k++) simBtns[k].classList.remove('active');
+        btn.classList.add('active');
+        current = SIM_DATA[parseInt(btn.dataset.sim, 10)];
+        simCustomer.querySelector('p').textContent = current.c;
+        simSetter.classList.remove('show');
+        simSetter.querySelector('p').textContent = '';
+        simReveal.disabled = false;
+        simReveal.textContent = 'Reveal looped response \u2192';
+      });
+    })(simBtns[b]);
+  }
+  simReveal.addEventListener('click', function(){
+    if (!current) return;
+    simSetter.querySelector('p').textContent = current.s;
+    simSetter.classList.add('show');
+    simReveal.textContent = '\u2713 Now read it out loud';
+    simReveal.disabled = true;
+  });
+</script>
+</body>
+</html>
